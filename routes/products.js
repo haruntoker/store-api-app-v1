@@ -7,9 +7,6 @@ const {getAllProductsStatic, getAllProducts} = require('../controllers/products'
 
 router.get('/', getAllProducts)
 router.get('/static', getAllProductsStatic)
-router.post('/')
-router.patch('/:id')
-router.delete('/:id')
 
 
 
