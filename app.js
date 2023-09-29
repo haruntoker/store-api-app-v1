@@ -2,6 +2,8 @@ const express = require('express')
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
 const bodyParser = require('body-parser')
+require('express-async-errors')
+
 
 const app = express()
 
@@ -13,9 +15,13 @@ const notFoundMW = require('./middleware/not-found')
 const errorHandlerMW = require('./middleware/error-handler')
 
 
+
 //middlewares
 app.use(bodyParser.json())
 app.use(express.json())
+
+
+
 
 //main route
 app.get('/', (req,res)=>{
